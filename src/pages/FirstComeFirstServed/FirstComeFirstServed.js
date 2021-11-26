@@ -190,7 +190,7 @@ const FirstComeFirstServed = ({ totalProcesses, processingDone }) => {
     setLastUpdate(now)
 
     // Check if process end
-    if (newProcesses.length === 0 && readyProcesses.length === 0 && blockedProcesses.length === 0 && processInExecution === null) {
+    if (newProcesses.length === 0 && readyProcesses.length === 0 && blockedProcesses.length === 0 && processInExecution === null && suspended) {
       setIsProcessing(false)
       if (simulationEnd === null) {
         setSimulationEnd(globalTime)
